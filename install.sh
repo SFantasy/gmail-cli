@@ -13,7 +13,8 @@ else
 fi
 
 echo "Setting up your Gmail account..."
-read -p 'Input your username:' username
+#Open gmail.sh and modify username
+vi gmail.sh
 
 sudo chmod 775 gmail.sh
 #Link it
