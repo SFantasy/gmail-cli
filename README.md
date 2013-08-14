@@ -11,7 +11,13 @@ gmail-cli
 
 **MANUAL**
 
-	# view mails
+	# view mails by default
 	gmail
 	# with variable to view
 	gmail -n 10
+	# check inbox
+	gmail check
+
+**LICENSE**
+
+See LICENSE file.
