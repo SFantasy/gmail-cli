@@ -16,7 +16,16 @@ elif [ "$1" == "-n" -a -z "$2" ]; then
 	exit 0
 elif [ -z "$1" -a -z "$2" ]; then
 	echo '5 mails shown as default:'
+elif [ "$1" == "check" ]; then
+	COUNT=$(curl -u $username --silent "https://mail.google.com/mail/feed/atom" | awk '/^<fullcount>/' | sed 's/<fullcount>//' | sed 's/<\/fullcount>//')
+	if [ "$COUNT" == "0" ]; then
+		echo 'Inbox empty'
+	else
+		echo $COUNT ' mails unread'
+	fi
+	exit 0
 fi
+
 #Log in your Gmail 
 curl -u $username  --silent "https://mail.google.com/mail/feed/atom" | \
 tr -d '\n' | \
