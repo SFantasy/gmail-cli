@@ -7,8 +7,8 @@ echo "Checking...(this may need your root password)"
 #If you have curl installed
 which curl > /dev/null 2>&1
 if [ $? == 0 ]; then
-	echo 
-else 
+	echo
+else
 	echo "Gmail-cli requires curl, install it first"
 fi
 
@@ -18,6 +18,6 @@ vi gmail.sh
 
 sudo chmod 775 gmail.sh
 #Link it
-ln ./gmail.sh /bin/gmail
+sudo ln ./gmail.sh /bin/gmail
 
 echo 'Gmail-cli installed.'
