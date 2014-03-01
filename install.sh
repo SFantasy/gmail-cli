@@ -18,6 +18,6 @@ vi gmail.sh
 
 sudo chmod 775 gmail.sh
 #Link it
-ln ./gamil.sh /bin/gmail
+ln ./gmail.sh /bin/gmail
 
 echo 'Gmail-cli insalled.'
