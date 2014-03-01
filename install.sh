@@ -20,4 +20,4 @@ sudo chmod 775 gmail.sh
 #Link it
 ln ./gmail.sh /bin/gmail
 
-echo 'Gmail-cli insalled.'
+echo 'Gmail-cli installed.'
